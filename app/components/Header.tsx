@@ -42,6 +42,9 @@ export default function Header() {
           <div className="md:hidden text-lg font-black text-white">
             <SearchBar />
           </div>
+          <div className="hidden lg:block text-sm font-semibold text-zinc-700">
+            Music Platform UI System
+          </div>
         </div>
         <div className="flex items-center justify-between overflow-scroll lg:overflow-visible py-4 lg:mt-4">
           <ul className="flex space-x-2 menu-items">

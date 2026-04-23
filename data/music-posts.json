@@ -1,0 +1,24 @@
+[
+  {
+    "id": "a3a4f7ff-98ad-4717-a52d-a18380da8f5a",
+    "title": "Lonely at the Top",
+    "artist": "Asake",
+    "category": "Afrobeats",
+    "summary": "A charting Afrobeats single featured for demo search and category filtering.",
+    "likes": 12,
+    "saves": 8,
+    "spotifyUrl": "https://open.spotify.com/track/6gbyf0sRsuX5MTB3WfG4Yo",
+    "createdAt": "2026-04-23T09:00:00.000Z"
+  },
+  {
+    "id": "8e0cc260-1778-4671-8c4b-5766d8ac7f9a",
+    "title": "HUMBLE.",
+    "artist": "Kendrick Lamar",
+    "category": "Hip-hop",
+    "summary": "A hip-hop reference post to demonstrate mixed catalog support.",
+    "likes": 21,
+    "saves": 14,
+    "spotifyUrl": "https://open.spotify.com/track/7KXjTSCq5nL1LoYtL7XAwS",
+    "createdAt": "2026-04-22T13:30:00.000Z"
+  }
+]
