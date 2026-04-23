@@ -19,10 +19,10 @@ type ExtendedMetadata = Metadata & {
 };
 
 export const metadata: ExtendedMetadata = {
-  title: "tooExclusive.com | #1 Nigerian Music and Entertainment Website",
+  title: "Music Platform UI System",
   description:
-    "Nigerian Music and Entertainment site TooExclusive.com provides Nigerian Songs, Entertainment news &amp; Videos of your favorite Artists in 2024",
-  authors: [{ name: "TooExclusive" }],
+    "Music Content Platform with responsive UI, reusable components, API-driven music posts, authentication, and admin uploads.",
+  authors: [{ name: "Music Platform Team" }],
   robots:
     "follow, index, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
 };

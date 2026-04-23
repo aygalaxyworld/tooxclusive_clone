@@ -1,19 +1,16 @@
-import React from 'react'
-
-
+import ReleaseGridPage from "@/app/components/ReleaseGridPage";
 
 export const metadata = {
-  title: "about tooxclusive | #1 Nigerian Music and Entertainment Website",
-}
+  title: "Songs | Tooxclusive",
+};
 
-
-
-export default async function Songs({params}:{params: Promise<{songs : string}>;}) {
-  const {songs} = await params; 
-  console.log(songs)
+export default async function SongsPage() {
   return (
-    <div>
-      <h1> welcome to the {songs} page</h1>
-    </div>
-  )
+    <ReleaseGridPage
+      title="Latest Songs"
+      description="Browse newly released songs and charting tracks across the platform."
+      categories={["Afrobeats", "Hip-hop", "R&B", "Gospel", "Trending"]}
+      ctaLabel="Play song"
+    />
+  );
 }

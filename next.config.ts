@@ -1,18 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  
   reactStrictMode: true,
-
   images: {
-
-    // eslint-disable-next-line
-    domains: ['e32oxuuwzrw.exactdn.com', 'tooxclusive.com']
-
+    domains: ["e32oxuuwzrw.exactdn.com", "tooxclusive.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.mzstatic.com",
+      },
+    ],
   },
-
 };
 
-  
 export default nextConfig;

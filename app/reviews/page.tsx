@@ -1,26 +1,16 @@
-"use client";
+import ReleaseGridPage from "@/app/components/ReleaseGridPage";
 
-import React from 'react'
-import { useRouter } from 'next/navigation';
+export const metadata = {
+  title: "Reviews | Tooxclusive",
+};
 
-export default function Reviews() {
-  const router = useRouter();
-  const handleReviews = () => {
-       router.push("/reviews/other-users")
-  }
-  const createNewReview = () => {
-    router.push("/reviews/new")
-  }
+export default async function ReviewsPage() {
   return (
-    <div className="flex p-5 gap-28" >
-      <div className="text-center">
-        <h1>Reviews by other users</h1>
-        <button onClick={handleReviews}>Click Here</button>
-      </div>
-      <div className="text-center">
-        <h1>Review a song</h1>
-        <button onClick={createNewReview}>Click Here</button>
-      </div>
-    </div>
-  )
+    <ReleaseGridPage
+      title="Song Reviews & Reactions"
+      description="Editorial and audience picks focused on trending tracks, lyrics deep-dives, and mixtape highlights."
+      categories={["Trending", "Lyrics", "Mixtape"]}
+      ctaLabel="Read review context"
+    />
+  );
 }

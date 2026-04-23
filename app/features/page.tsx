@@ -1,9 +1,16 @@
-import React from 'react'
+import ReleaseGridPage from "@/app/components/ReleaseGridPage";
 
-export default function Features() {
+export const metadata = {
+  title: "Features | Tooxclusive",
+};
+
+export default async function FeaturesPage() {
   return (
-    <div>
-      <h1>Features</h1>
-    </div>
-  )
+    <ReleaseGridPage
+      title="Editorial Features"
+      description="Hand-picked features from our editors showcasing major drops, unique sounds, and standout releases."
+      categories={["Afrobeats", "Mixtape", "Lyrics"]}
+      ctaLabel="Explore feature"
+    />
+  );
 }
