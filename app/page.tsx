@@ -1,10 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Card from "./components/Card";
-import MediumCard from "./components/MediumCard";
 import DescriptiveCard from "./components/DescriptiveCard";
-import BulletLink from "./components/BulletLink";
 import CalloutCard from "./components/CalloutCard";
 import { getLatestReleases } from "./lib/music-api";
 
@@ -48,7 +45,7 @@ export default async function Home() {
       <section className="px-6 py-10">
         <h3 className="text-2xl font-bold mb-6">🔥 Trending Now</h3>
         <div className="flex overflow-x-auto space-x-6 scrollbar-hide">
-          {trending.slice(0, 10).map((release, idx) => (
+          {trending.slice(0, 10).map((release) => (
             <div
               key={release.id}
               className="min-w-[200px] bg-white/10 backdrop-blur-md rounded-xl p-4 hover:scale-105 transition"
