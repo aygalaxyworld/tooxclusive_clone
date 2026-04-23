@@ -1,9 +1,16 @@
-import React from 'react'
+import ReleaseGridPage from "@/app/components/ReleaseGridPage";
 
-export default function Artist() {
+export const metadata = {
+  title: "Artistes | Tooxclusive",
+};
+
+export default async function ArtistPage() {
   return (
-    <div>
-      <h1>Artist</h1>
-    </div>
-  )
+    <ReleaseGridPage
+      title="Featured Artistes"
+      description="Discover top and emerging artistes across Afrobeats, Hip-hop, and R&B with a continuously updated feed from the music API."
+      categories={["Afrobeats", "Hip-hop", "R&B"]}
+      ctaLabel="View artiste release"
+    />
+  );
 }
