@@ -1,77 +1,54 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 
-interface MediumCardProps {
-    href1: string;
-    src1: string;
-    alt1: string;
-    title1: string;
-    date1: string;
-    href2: string;
-    src2: string;
-    alt2: string;
-    title2: string;
-    date2: string;
-  }
+interface DescriptiveCardProps {
+  href?: string;
+  src?: string;
+  alt?: string;
+  rating?: string;
+  title?: string;
+  date?: string;
+}
 
-export default function MediumCard ({ href1, src1, alt1, title1, date1, href2, src2, alt2, title2, date2 }: MediumCardProps) {
+export default function DescriptiveCard({
+  href,
+  src,
+  alt,
+  rating,
+  title,
+  date,
+}: DescriptiveCardProps) {
+  const safeHref = href || "https://music.apple.com";
+  const safeSrc = src || "/placeholder.jpg";
+  const safeAlt = alt || "Latest release";
+  const safeRating = rating || "HOT";
+  const safeTitle = title || "Untitled Release";
+  const safeDate = date || "Live API";
+
   return (
-    <div className="flex my-4 w-full flex-col space-y-5 md:space-x-6 md:flex-row md:space-y-0">
-            <div className=" w-full md:w-1/2 ">
-              <div className="grid grid-cols-3 ">
-                <div>
-                <Link href={href1}>
-                <Image
-                  src={src1}
-                  alt={alt1}
-                  layout="responsive"
-                  width={120}
-                  height={86}
-                  />
-                </Link>
-                 </div>
-              <div className="col-span-2 flex flex-col  ml-3">
-                <Link href={href1}>
-                    <h3 className="text-left text-sm  md:text-base text-black font-semibold hover:text-red-500">{title1}</h3>
-                </Link>
-                <Link href={href1}>
-                  <h3 className="text-left font-medium text-10m uppercase mt-2 md:text-11m">
-                  <i className="fa-regular fa-clock text-blue-700 "></i>
-                  <span className="ml-2 text-gray-400">{date1}</span>
-                  </h3>
-                </Link>
-
-              </div>
-              </div>
-             </div>
-             <div className=" flex w-full md:w-1/2 ">
-            <div className="grid grid-cols-3 ">
-                <div>
-                  <Link href={href2}>
-                  <Image
-                  src={src2}
-                  alt={alt2}
-                  layout="responsive"
-                  width={120}
-                  height={86}
-                  />
-                  </Link>
-                </div>
-              <div className="col-span-2 flex flex-col  ml-3">
-                <Link href={href2}>
-                    <h3 className="text-left text-sm  md:text-base text-black font-semibold  hover:text-red-500">{title2}</h3>
-                </Link>
-                <Link href={href2}>
-                  <h3 className="text-left font-medium text-10m uppercase mt-2 md:text-11m">
-                  <i className="fa-regular fa-clock text-blue-700 "></i>
-                  <span className="ml-2 text-gray-400">{date2}</span>
-                  </h3>
-                </Link>
-              </div>
-
-              </div>
-             </div>
-          </div>
-  )
+    <div className="flex flex-col w-full">
+      <Link href={safeHref} aria-label={`Read more about ${safeTitle}`}>
+        <div className="relative">
+          <Image
+            src={safeSrc}
+            alt={safeAlt}
+            width={500}
+            height={200}
+            className="object-cover"
+          />
+          <span className="absolute left-3 bottom-3 bg-red-600 text-xs font-medium px-2 text-white">
+            {safeRating}
+          </span>
+        </div>
+        <h3 className="text-black text-lg font-semibold mt-3 hover:text-red-500">
+          {safeTitle}
+        </h3>
+        <h3 className="text-left font-medium text-xs text-black uppercase mt-2">
+          <i className="fa-regular fa-clock text-blue-700"></i>
+          <span className="ml-2">{safeDate}</span>
+        </h3>
+      </Link>
+    </div>
+  );
 }
