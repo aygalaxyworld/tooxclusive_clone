@@ -57,3 +57,10 @@ curl -X POST http://localhost:3000/api/music \
     "spotifyUrl": "https://open.spotify.com/track/..."
   }'
 ```
+
+
+## Live release feed
+
+- Homepage now keeps the original multi-section layout and adds live release cards fetched from the free iTunes Search API.
+- API-backed release content is cached and automatically refreshed every 30 minutes via Next.js revalidation.
+- Release API endpoint: `GET /api/music/releases`.
